@@ -1086,3 +1086,7 @@ display: flex;
 #contact-header .section-p1 p{
   text-decoration: none;
 }
+
+#sorry{
+  display: none;
+}
