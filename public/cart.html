@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart-The Swap Shop</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="../index.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-------------------------Font Awesome Icons --------------->
     <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+    <script src="./js/Cart.js" type="text/javascript" crossorigin="anonymous"></script>
     <!----------x---------------Font Awesome Icons --------x------->
 
     <!----------x---------------Google font --------x------->
@@ -23,19 +23,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display:swap">
     <!----------x---------------Google font --------x----------------->
-    <link rel = "icon" href = "../Images/Favicon.jpg" type = "image/x-icon">
-    <script src="../server.js"></script>
+    <link rel = "icon" href = "./Images/Favicon.jpg" type = "image/x-icon">
 </head>
 <!-- <img src="" alt=""> -->
     <!-- test line to create a new folder on github -->
 <body>
     <section id="header">
-        <a href="#"><img src="../Images/shop(2).png"></a>
+        <a href="#"><img src="./Images/shop(2).png"></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home <i class="fa-solid fa-house"></i></a></li>
                 <li><a href="shop.html">Shop <i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="blog.html">Blog <i class="fa-solid fa-pen-nib"></i></a></li>
+                <li><a href="sellerpage.html"  >Sell  <i class="fa-solid fa-pen-nib"></i></a></li>
                 <li><a href="aboutus.html">About <i class="fa-solid fa-address-card"></i></a></li>
                 <li><a href="contact.html">Contact <i class="fa-solid fa-id-badge"></i></a></li>
                 <li><a class="active" href="cart.html" id="lg-bag"><i class="fal fa-shopping-bag"></i></a>
@@ -69,66 +69,32 @@
                     <td>Subtotal</td>
                 </tr>
             </thread>
-            <tbody>
-                <tr>
-                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="../Images/IMG-20230928-WA0011.jpg" alt=""></TD>
-                     <td>MAGGI</td>   
-                     <TD>RS.10</TD>
-                     <TD><input type="number" value="1"></TD>
-                     <td>Rs.10</td>
-                </tr>
-                <tr>
-                <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                <td><img src="../Images/IMG-20230928-WA0017.jpg" alt=""></TD>
-                 <td>MAGGI</td>   
-                 <TD>RS.10</TD>
-                 <TD><input type="number" value="1"></TD>
-                 <td>Rs.10</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="../Images/IMG-20230928-WA0019.jpg" alt=""></TD>
-                     <td>ROOHAFZA</td>   
-                     <TD>RS.80</TD>
-                     <TD><input type="number" value="1"></TD>
-                     <td>Rs.80</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#"><i class="far fa-times-circle"></i></a></td>
-                        <td><img src="../Images/nissincupnoodles.jpeg" alt=""></TD>
-                         <td>MASALA CUP NOODLES</td>   
-                         <TD>RS.100</TD>
-                         <TD><input type="number" value="1"></TD>
-                         <td>Rs.100</td>
-                         
-                        </tr>
-
+            <tbody id="cart-item">
             </tbody>
         </table>
         </section>
        <section id="cart-add" class="section-p1">
-        <div id="coupon">
+        <div>
             <h3>Apply Coupon</h3>
             <div>
-                <input type="text" placeholder="Enter your Coupon">
-                <button class="normal">Apply</button>
+                <input type="text" placeholder="Enter your Coupon" id="coupon" value="Freebie">
+                <button class="normal" onclick="getTotal()">Apply</button>
             </div>
         </div>
-        <div id="subtotal">
+        <div>
             <h3>Cart totals</h3>
             <table>
                 <tr>
                     <td>Cart Subtotal</td>
-                    <td>Rs.0</td>
+                    <td id="subtotal"></td>
                     </tr>
                     <tr>
                         <td>Shipping</td>
-                        <td>Free</td>
+                        <td id="shipping"></td>
                     </tr>
                     <tr>
                         <td><strong>Total</strong></td>
-                        <td><strong>Rs.0</rs></strong></td>
+                        <td id="total"><strong></rs></strong></td>
                     </tr>
                     </tr>
                 </tr>
@@ -221,7 +187,7 @@
         }
 
     </script> -->
-    <script src="script.js"></script>
-</body>
+    <script src="./js/script.js"  type="text/javascript" integrity="sha256-jBlKorkWxkE3qFXa1Fk+rPSWQHicS+UfPJeagIXyl1M=" crossorigin="anonymous"></script>
 
+    
 </html>

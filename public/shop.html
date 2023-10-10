@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - The Swap Shop</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="../index.css">
-    <script src="../script.js"></script>
-    <script src="../server.js"></script>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-------------------------Font Awesome Icons --------------->
     <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+    <script src="./js/Cart.js" type="text/javascript" crossorigin="anonymous"></script>
+    <script src="./js/searchBar.js" type="text/javascript" integrity="sha256-1MZYBp8W0/5/th07bKeOinpHo+tIsHVIr6QMS5eo5pY=" crossorigin="anonymous"></script>
     <!----------x---------------Font Awesome Icons --------x------->
 
     <!----------x---------------Google font --------x------->
@@ -24,26 +24,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display:swap">
     <!----------x---------------Google font --------x----------------->
-    <link rel="icon" href="../Images/Favicon.jpg" type="image/x-icon">
+    <link rel="icon" href="./Images/Favicon.jpg" type="image/x-icon">
 </head>
 <!-- <img src="" alt=""> -->
     <!-- test line to create a new folder on github -->
 <body>
     <section id="header">
-        <a href="#"><img src="../Images/shop(2).png"></a>
+        <a href="#"><img src="./Images/shop(2).png"></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home <i class="fa-solid fa-house"></i></a></li>
                 <li><a class="active" href="shop.html">Shop <i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="blog.html">Blog <i class="fa-solid fa-pen-nib"></i></a></li>
+                <li><a href="sellerpage.html"  >Sell  <i class="fa-solid fa-pen-nib"></i></a></li>
                 <li><a href="about.html">About <i class="fa-solid fa-address-card"></i></a></li>
                 <li><a href="contact.html">Contact <i class="fa-solid fa-id-badge"></i></a></li>
                 <li><a href="cart.html" id="lg-bag"><i class="fal fa-shopping-bag"></i></a>
                     <span class="quantity">0</span>
                 </li>
                 <li id="search-bar">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+                    <input type="text" id="search" placeholder="Search...">
+                    <button type="submit" id="search-button" onclick="Search()"><i class="fas fa-search"></i></button>
                 </li>
                 <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
             </ul>
@@ -66,7 +67,7 @@
         <p>Semester Collection New Items</p>
         <div class="pro-container">
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/Dairy-Milk-10-Rs-pack-of-56-units-box.webp"
+                <a href="sproducts.html"><img src="./Images/Dairy-Milk-10-Rs-pack-of-56-units-box.webp"
                         alt="Dairy Milk 5"></a>
                 <div class="des">
                     <span>Cadbury</span>
@@ -80,12 +81,12 @@
                     </div>
                     <h4>Rs.50</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Dairy-Milk-10-Rs-pack-of-56-units-box.webp', 'Dairy Milk 5', 'RS. 50')"></i>
             </div>
 
 
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/eclairs.jpg" alt="Eclairs"></a>
+                <a href="sproducts.html"><img src="./Images/eclairs.jpg" alt="Eclairs"></a>
                 <div class="des">
                     <span>Cadbury</span>
                     <h5>Eclairs - Pack 1</h5>
@@ -98,12 +99,12 @@
                     </div>
                     <h4>Rs.100</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href="" onclick="saveToCart('./Images/eclairs.jpg', 'Eclairs', 'RS. 100' )"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
 
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/crispello.jpeg" alt=""></a>
+                <a href="sproducts.html"><img src="./Images/crispello.jpeg" alt="Crispello"></a>
                 <div class="des">
                     <span>Cadbury</span>
                     <h5>Crispello - 1</h5>
@@ -116,12 +117,12 @@
                     </div>
                     <h4>Rs.40</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href="" onclick="saveToCart('./Images/crispello.jpeg', 'Crispello', 'Rs. 40')"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
 
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/fuse.jpeg" alt=""></a>
+                <a href="sproducts.html"><img src="./Images/fuse.jpeg" alt="fuse"></a>
                 <div class="des">
                     <span>Cadbury</span>
                     <h5>Fuse - 1</h5>
@@ -134,13 +135,13 @@
                     </div>
                     <h4>Rs.20</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href="" onclick="saveToCart('./Images/fuse.jpeg', 'fuse', 'Rs. 20')"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
 
 
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/maggicupnoodles.webp" alt=""></a>
+                <a href="sproducts.html"><img src="./Images/maggicupnoodles.webp" alt=""></a>
                 <div class="des">
                     <span>Nestlé</span>
                     <h5>Maggi Cuppa - 1</h5>
@@ -153,13 +154,13 @@
                     </div>
                     <h4>Rs.50</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
 
 
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/nestlemilk.jpeg" alt=""></a>
+                <a href="sproducts.html"><img src="./Images/nestlemilk.jpeg" alt=""></a>
                 <div class="des">
                     <span>Nestlé</span>
                     <h5>Everday Milk Powder - 1</h5>
@@ -172,13 +173,13 @@
                     </div>
                     <h4>$78</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
 
 
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/milkybar.jpeg" alt=""></a>
+                <a href="sproducts.html"><img src="./Images/milkybar.jpeg" alt=""></a>
                 <div class="des">
                     <span>Nestlé</span>
                     <h5>Nestlé Milkybar - 1</h5>
@@ -191,13 +192,13 @@
                     </div>
                     <h4>Rs.78</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
 
 
             <div class="pro">
-                <a href="sproducts.html"><img src="../Images/munch.webp" alt=""></a>
+                <a href="sproducts.html"><img src="./Images/munch.webp" alt=""></a>
                 <div class="des">
                     <span>Nestlé</span>
                     <h5>Nestlé Munch - 1</h5>
@@ -210,12 +211,12 @@
                     </div>
                     <h4>Rs.10</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
 
             <div class="pro-container">
                 <div class="pro">
-                    <a href="sproducts.html"><img src="../Images/nissincupnoodles.jpeg" alt=""></a>
+                    <a href="sproducts.html"><img src="./Images/nissincupnoodles.jpeg" alt=""></a>
                     <div class="des">
                         <span>Nissin</span>
                         <h5>Masala Cup Noodles Curry - 1</h5>
@@ -228,12 +229,12 @@
                         </div>
                         <h4>Rs.50</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
 
 
                 <div class="pro">
-                    <a href="sproducts.html"><img src="../Images/nissin.png" alt=""></a>
+                    <a href="sproducts.html"><img src="./Images/nissin.png" alt=""></a>
                     <div class="des">
                         <span>Nissin</span>
                         <h5>Nissin Chinese Cup Noodles - 1</h5>
@@ -246,12 +247,12 @@
                         </div>
                         <h4>Rs.60</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
 
 
                 <div class="pro">
-                    <a href="sproducts.html"><img src="../Images/upma.jpg" alt=""></a>
+                    <a href="sproducts.html"><img src="./Images/upma.jpg" alt=""></a>
                     <div class="des">
                         <span>Desi Mealz</span>
                         <h5>Ready to Eat Upma</h5>
@@ -264,12 +265,12 @@
                         </div>
                         <h4>Rs.70</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
 
 
                 <div class="pro">
-                    <a href="sproducts.html"><img src="../Images/lemon-rice.webp" alt=""></a>
+                    <a href="sproducts.html"><img src="./Images/lemon-rice.webp" alt=""></a>
                     <div class="des">
                         <span>Quic Food</span>
                         <h5> Ready to Eat Lemon Rice </h5>
@@ -282,13 +283,13 @@
                         </div>
                         <h4>Rs.70</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
 
 
 
                 <div class="pro">
-                    <a href="sproducts.html"><img src="../Images/Chips lovers!!!.jpeg" alt=""></a>
+                    <a href="sproducts.html"><img src="./Images/Chips lovers!!!.jpeg" alt=""></a>
                     <div class="des">
                         <span>Lays</span>
                         <h5>Pack of 2</h5>
@@ -301,13 +302,13 @@
                         </div>
                         <h4>Rs.40</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
 
 
 
                 <div class="pro">
-                    <a href="sproducts.html"><img src="../Images/Kurkure time.jpeg" alt=""></a>
+                    <a href="sproducts.html"><img src="./Images/Kurkure time.jpeg" alt=""></a>
                     <div class="des">
                         <span>Kurkure</span>
                         <h5>Green Chutney Style </h5>
@@ -320,14 +321,14 @@
                         </div>
                         <h4>Rs.10</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
 
 
 
                 <div class="pro">
                     <a href="sproducts.html"><img
-                            src="../Images/The Limited Edition Ultimate Cheddar Doritos Were Spotted At 7-Eleven And We’ve Got Zero Chill About It.jpeg"
+                            src="./Images/The Limited Edition Ultimate Cheddar Doritos Were Spotted At 7-Eleven And We’ve Got Zero Chill About It.jpeg"
                             alt=""></a>
                     <div class="des">
                         <span>Doritos</span>
@@ -341,13 +342,13 @@
                         </div>
                         <h4>Rs.20</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
 
 
 
                 <div class="pro">
-                    <a href="sproducts.html"><img src="../Images/Chips.jpeg" alt=""></a>
+                    <a href="sproducts.html"><img src="./Images/Chips.jpeg" alt=""></a>
                     <div class="des">
                         <span>Bingo</span>
                         <h5>Mad Angles</h5>
@@ -360,9 +361,12 @@
                         </div>
                         <h4>Rs.10</h4>
                     </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                    <a href="" onclick="saveToCart()"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
-
+                <div id="sorry" style="align-items: center;">
+                    <h5>Sorry for inconvinience <i class="far fa-sad-tear"> !</i></h5>
+                    <span>This item is not available right now.</span>
+                </div>
             </div>
     </section>
 
@@ -388,7 +392,7 @@
     <footer class="section-p1">
 
         <div class="col">
-            <a href="#"><img class="logo" src="../Images/shop(2).png"></a>
+            <a href="#"><img class="logo" src="./Images/shop(2).png"></a>
             <h4>Contact</h4>
             <p><strong>Address:<strong>VIT Bhopal University</p>
             <p><strong>Phone:</strong>+91 3456876199, +91 458903120</p>
@@ -448,9 +452,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <script src="../script.js"></script>
+        <script src="./js/script.js"  type="text/javascript" integrity="sha256-jBlKorkWxkE3qFXa1Fk+rPSWQHicS+UfPJeagIXyl1M=" crossorigin="anonymous"></script>
 </body>
 
 </html>
