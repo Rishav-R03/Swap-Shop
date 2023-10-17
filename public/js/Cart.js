@@ -10,6 +10,7 @@ function saveToCart(image, product, price){
         quantity: 1
     }
     products.forEach(element => {
+        alert(element);
         if(element.prod===product && element.img===image && element.pri===price){
             element.quantity=element.quantity+1;
             found=true;
@@ -20,6 +21,7 @@ function saveToCart(image, product, price){
     }
     // alert(products);
     window.localStorage.setItem("product", JSON.stringify(products));
+    
 }
 
 function addToCart(){
@@ -96,7 +98,10 @@ function removeFromCart(iid){
             window.localStorage.setItem("product", JSON.stringify(newProducts));
         }else{
             window.localStorage.clear();
+        
         }
+        location.reload();
+        getTotal();
     }
 }
 
@@ -109,7 +114,9 @@ function CalculateTotal(quantity, price, val){
 
 window.onload = function() {
     // Your function code here
+    
     addToCart();
+    
     getTotal();
 };
 
@@ -137,3 +144,4 @@ function getTotal(){
     document.getElementById("total").innerHTML = "" +  (total + shipping);
     
 }
+
