@@ -21,6 +21,7 @@ function saveToCart(image, product, price){
     }
     // alert(products);
     window.localStorage.setItem("product", JSON.stringify(products));
+    
 }
 
 function addToCart(){
@@ -97,8 +98,10 @@ function removeFromCart(iid){
             window.localStorage.setItem("product", JSON.stringify(newProducts));
         }else{
             window.localStorage.clear();
-            window.reload();
+        
         }
+        location.reload();
+        getTotal();
     }
 }
 
@@ -111,7 +114,9 @@ function CalculateTotal(quantity, price, val){
 
 window.onload = function() {
     // Your function code here
+    
     addToCart();
+    
     getTotal();
 };
 
@@ -139,3 +144,4 @@ function getTotal(){
     document.getElementById("total").innerHTML = "" +  (total + shipping);
     
 }
+
