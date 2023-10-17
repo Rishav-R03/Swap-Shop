@@ -10,6 +10,7 @@ function saveToCart(image, product, price){
         quantity: 1
     }
     products.forEach(element => {
+        alert(element);
         if(element.prod===product && element.img===image && element.pri===price){
             element.quantity=element.quantity+1;
             found=true;
@@ -96,6 +97,7 @@ function removeFromCart(iid){
             window.localStorage.setItem("product", JSON.stringify(newProducts));
         }else{
             window.localStorage.clear();
+            window.reload();
         }
     }
 }
