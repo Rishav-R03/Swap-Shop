@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="./css/index.css" type="text/css">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <!-------------------------Font Awesome Icons --------------->
-    <script src="https://kit.fontawesome.com/dad03e859c.js" integrity="sha256-..." crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dad03e859c.js"  crossorigin="anonymous"></script>
     <!----------x---------------Font Awesome Icons --------x------->
 
     <!----------x---------------Google font --------x------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap"
         rel="stylesheet">
@@ -25,7 +25,8 @@
     <!--Favicon-->
     <link rel="icon" href="./Images/Favicon.jpg" type="image/x-icon">
     </script>
-    <script src="./js/searchBar.js" type="text/javascript" integrity="sha256-1MZYBp8W0/5/th07bKeOinpHo+tIsHVIr6QMS5eo5pY=" crossorigin="anonymous"></script>
+    <script src="./js/searchBar.js" type="text/javascript"  crossorigin="anonymous"></script>
+    <script src="./js/Cart.js" type="text/javascript" crossorigin="anonymous"></script>
 
 </head>
 <!-- <img src="" alt=""> -->
@@ -38,7 +39,7 @@
                 <li><a href="index.html" class="active">Home <i class="fa-solid fa-house"></i></a></li>
                 <li><a href="shop.html">Shop <i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li><a href="blog.html">Blog <i class="fa-solid fa-pen-nib"></i></a></li>
-                <li><a href="sellerpage.html"  >Sell  <i class="fa-solid fa-pen-nib"></i></a></li>
+                <li><a href="sellerpage.html"  >Sell  <i class="fa-solid fa-coins"></i></a></li>
                 <li><a href="aboutus.html">About <i class="fa-solid fa-address-card"></i></a></li>
                 <li><a href="contact.html">Contact <i class="fa-solid fa-id-badge"></i></a></li>
                 <li><a href="login.html" id="login"> Login/SignUp <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
@@ -68,7 +69,7 @@
         <h2>BUY AND SELL</h2>
         <h1>GROCERIES AND STATIONARY</h1>
         <p>Save more and buy more</p>
-        <button type="submit" id="shopnow">Shop Now</button>
+        <button type="submit" id="shopnow" onclick="{{window.location.href='./shop.html'}}">Shop Now</button>
 
     </section>
 
@@ -123,7 +124,7 @@
                     </div>
                     <h4>Rs. 85</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/IMG-20230928-WA0019.jpg', 'Roohafza', 'RS. 85')"></i></a>
             </div>
 
 
@@ -141,7 +142,7 @@
                     </div>
                     <h4>Rs.10</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Chips.jpeg', 'Mad Angles', 'RS. 10')"></i></a>
             </div>
 
 
@@ -159,7 +160,7 @@
                     </div>
                     <h4>Rs.10</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/milkybar.jpeg', 'Milkybar', 'RS. 10')"></i></a>
             </div>
 
 
@@ -177,7 +178,7 @@
                     </div>
                     <h4>Rs.40</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/maggicupnoodles.webp', 'Maggi Cuppa', 'RS. 40')"></i></a>
             </div>
 
 
@@ -197,7 +198,7 @@
                     </div>
                     <h4>Rs.150</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Pouch green lime color for many purpose like school, collage, work, or make up pouch.jpeg', 'Lime Green Pouch', 'RS. 150')"></i></a>
             </div>
 
 
@@ -217,7 +218,7 @@
                     </div>
                     <h4>Rs.170</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Notebooks with cute strawberry _ stationery _ Food and drink illustration art _ foodie _ food art.jpeg', 'Lime Green Pouch', 'RS. 170')"></i></a>
             </div>
 
 
@@ -237,7 +238,7 @@
                     </div>
                     <h4>Rs.200</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Aqualogica Glow+ Dewy Sunscreen Spf 50 Pa+++ For Glowing Skin, Cream, 50 Gram.jpeg', 'Dewy Sunscreen SPF 50+', 'RS. 200')"></i></a>
             </div>
 
 
@@ -256,7 +257,7 @@
                     </div>
                     <h4>Rs.100</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Vaseline as The Best Eye Makeup Remover_ How & Why_.jpeg', 'Petroleum Jelly','RS. 100')"></i></a>
             </div>
 
         </div>
@@ -288,7 +289,7 @@
                     </div>
                     <h4>Rs.30</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/IMG-20230928-WA0011.jpg','3 packet maggi' ,'RS. 30')"></i></a>
             </div>
 
 
@@ -306,7 +307,7 @@
                     </div>
                     <h4>Rs.120</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/IMG-20230928-WA0017.jpg','20 packets green tea' ,'RS. 120')"></i></a>
             </div>
 
 
@@ -324,7 +325,7 @@
                     </div>
                     <h4>Rs.180</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/IMG-20230928-WA0026.jpg','10 packet of soup' ,'RS. 180')"></i></a>
             </div>
 
 
@@ -344,7 +345,7 @@
                         <Rs class="400"></Rs>
                     </h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/bottle.jpg','Watter bottle' ,'RS. 400')"></i></a>
             </div>
 
 
@@ -362,7 +363,7 @@
                     </div>
                     <h4>Rs.90</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart"  onclick="saveToCart('./Images/IMG-20230928-WA0028.jpg','3Tang and 2 nescafe' ,'RS. 90')"></i></a>
             </div>
 
 
@@ -381,7 +382,7 @@
                     </div>
                     <h4>Rs.120</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart"  onclick="saveToCart('./Images/nescafe_classic.jpeg','Nescafe Coffee' ,'RS. 120')"></i></a>
             </div>
 
 
@@ -400,7 +401,7 @@
                     </div>
                     <h4>Rs.3</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Ketchup.jpeg','Heinz Ketchup Sachet' ,'RS. 3')"></i></a>
             </div>
 
 
@@ -419,10 +420,61 @@
                     </div>
                     <h4>Rs.80</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Gujiya.jpeg','Festive Gujiya' ,'RS. 80')"></i></a>
             </div>
 
 
+
+            <div class="pro">
+                <img src="./Images/peanut butter.jpg" alt="">
+                <div class="des">
+                    <span>Dr.Oetker</span>
+                    <h5>Peanut Butter</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.190</h4>
+                </div>
+                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="./Images/shampoo.jpg" alt="">
+                <div class="des">
+                    <span>L'oreal</span>
+                    <h5>Nourishing Shampoo</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.200</h4>
+                </div>
+                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="./Images/maggichutney.jpg"alt="">
+                <div class="des">
+                    <span>Nestlé</span>
+                    <h5>Maggi & Schezwan Chutney</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Rs.100</h4>
+                </div>
+                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
 
             <div class="pro">
                 <img src="./Images/Frooti.jpeg" alt="">
@@ -438,8 +490,10 @@
                     </div>
                     <h4>Rs.20</h4>
                 </div>
-                <a href=""><i class="fal fa-shopping-cart cart"></i></a>
+                <a href=""><i class="fal fa-shopping-cart cart" onclick="saveToCart('./Images/Frooti.jpeg','Frooti' ,'RS. 20')"></i></a>
             </div>
+
+
 
         </div>
     </section>
@@ -504,7 +558,7 @@
     <footer class="section-p1">
 
         <div class="col">
-            <a href="#"><img class="logo" src="Images/shop(2).png"></a>
+            <a href="#"><img class="logo" src="./Images/shop(2).png"></a>
             <h4>Contact</h4>
             <p><strong>Address:<strong>VIT Bhopal University</p>
 
@@ -528,7 +582,7 @@
                 <h4>About</h4>
                 <a href="#">About Us</a>
                 <a href="#">Feedback</a>
-                <a href="#">Privacy Policy</a>
+                <a href="#">Privacy <br> Policy</a>
                 <a href="#">T&C</a>
                 <a href="#">Contact Us</a>
             </div>
@@ -564,10 +618,10 @@
     </footer>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="./js/script.js"  type="text/javascript" integrity="sha256-jBlKorkWxkE3qFXa1Fk+rPSWQHicS+UfPJeagIXyl1M=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"  type="text/javascript"  crossorigin="anonymous"></script>
 </body>
 
 </html>
