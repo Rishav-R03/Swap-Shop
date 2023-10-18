@@ -10,23 +10,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel = "icon" href = "./Images/Favicon.jpg" type = "image/x-icon">
+    <script src="./js/login.js" type="text/javascript" crossorigin="anonymous"></script>
 </head>
 <body>
     <form>
     <div class="log-head bgo" >
         <div class="form-info">
             <p class="phead">Login</p>
-            <form action="login_process.php" method="POST"></form>
-            <form class="lform">
+            <form></form>
+            <form class="lform" action="" method="POST">
                 <div class="lform-input">
                     <label for="username">Name</label>
-                    <input type="text" id="username" name="name" placeholder="Enter Name">
+                    <input type="text" id="uname" name="username" placeholder="Enter Name">
                     <i class="fa-regular fa-keyboard"></i>
                    
                 </div>
                 <div class="lform-input">
-                    <label for="username">Email</label>
-                    <input type="text" id="username" name="username" placeholder="Enter Email" required>
+                    <label for="useremail">Email</label>
+                    <input type="email" id="uemail" name="useremail" placeholder="Enter Email" required>
                     <i class="fa-regular fa-user"></i>
                     
                 </div>
@@ -35,7 +36,7 @@
                     <input type="password" id="password" name="password" placeholder="Enter Password" required>
                     <i class="fa-solid fa-lock"></i>
                 </div>
-               <button class="lform-button" type="submit">Login </button>
+               <button id="login_button" class="lform-button" type="submit">Login </button>
                 <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me </label>
                 <div class="g-signin2" data-onsuccess="onSignIn"></div></label>
@@ -44,6 +45,7 @@
         </div>
     </div></form>
 </body>
+
 </html>
 <!-- <img src="" alt=""> -->
     <!-- test line to create a new folder on github -->
@@ -113,6 +115,7 @@
     }
 
     input[type=text],
+    input[type=email],
     input[type=password] {
         width: 100%;
         padding: 10px 20px;

@@ -54,6 +54,11 @@ app.get("/login_google", (req, res)=>{
     res.sendFile(__dirname + "/public/login_google.html");
 })
 
+app.get("/sellerpage", (req, res)=>{
+    console.log(__dirname+"/public/sellerpage.html");
+    res.sendFile(__dirname + "/public/sellerpage.html");
+})
+
 app.get("/signup", (req, res)=>{
     console.log(__dirname+"/public/signup.html");
     res.sendFile(__dirname + "/public/signup.html");
