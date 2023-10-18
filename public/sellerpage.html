@@ -66,17 +66,22 @@
 
     </section>
 
-    <section id="newsletter" class="section-p1">
-        <div class="newstext">
-            <h4>SIGN IN TO PROCEED</h4>
+    <div class="section-p1" id = "newsletter">
+    <p>Item to sell</p>
+    <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
+        <input type = "text" placeholder = "seller's name">
+        <br>
+      <input type="file" name="image" accept="image/*" id="file-input">
+      <button type="submit">Upload Image</button>
+        <br>
+        <input type = "text" name ="price" placeholder = "expected price">
+        <textarea name="description" id ="desp" placeholder="give product description"rows=5 column = 5>
+    </form>
+    <div id="message"></div>
+  </div>
             
-        </div>
-        <div class="form">
-            <input type="text" placeholder="Your email address">
-            <button class="btn normal">Sign Up</button>
-        </div>
-
-        </div>
+        
+        
 
     </section>
     <br>
