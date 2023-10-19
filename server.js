@@ -10,6 +10,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public'));
+
 const con = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -72,12 +73,52 @@ app.get("/sellerpage", (req, res)=>{
     console.log(__dirname+"/public/sellerpage.html");
     res.sendFile(__dirname + "/public/sellerpage.html");
 })
-
+app.post('/sellerpage', function (req, res) {
+    // console.log(req.body);
+    var Name = req.body.Name;
+    var Email = req.body.Email;
+    var Pwd = req.body.Pwd;
+    var CPwd = req.body.CPwd;
+    
+    con.connect(function(error,result){
+        if(error) throw error;
+        var sql = "INSERT INTO login (Name, Email, Pwd, CPwd) VALUES (?, ?, ?, ?)";
+        con.query(sql, [Name, Email, Pwd, CPwd], function (error, result) {
+        if (error) {
+            console.error(error);
+            return res.status(500).send("Error inserting user into the database.");
+        }
+        res.send("User Added Successfully: " + result.insertId);
+        });
+    
+    });
+    
+});
 app.get("/signup",function(req,res){
     console.log(__dirname+'/public/signup.html')
     res.sendFile(__dirname+'/public/signup.html');
 })
-
+app.post('/signup', function (req, res) {
+    // console.log(req.body);
+    var Name = req.body.Name;
+    var Email = req.body.Email;
+    var Pwd = req.body.Pwd;
+    var CPwd = req.body.CPwd;
+    
+    con.connect(function(error,result){
+        if(error) throw error;
+        var sql = "INSERT INTO login (Name, Email, Pwd, CPwd) VALUES (?, ?, ?, ?)";
+        con.query(sql, [Name, Email, Pwd, CPwd], function (error, result) {
+        if (error) {
+            console.error(error);
+            return res.status(500).send("Error inserting user into the database.");
+        }
+        res.send("User Added Successfully: " + result.insertId);
+        });
+    
+    });
+    
+});
 app.get("/blog", (req, res)=>{
     console.log(__dirname+"/public/blog.html");
     res.sendFile(__dirname + "/public/blog.html");
@@ -93,22 +134,6 @@ function handleDatabaseError(res, err) {
     console.error(err);
     res.status(500).json({ message: "An error occurred on the server." });
 }
-app.post('/signup', function (req, res) {
-    console.log(req.body);
-    var Name = req.body.Name;
-    var Email = req.body.Email;
-    var Pwd = req.body.Pwd;
-    var CPwd = req.body.CPwd;
-    
-    var sql = "INSERT INTO login (Name, Email, Pwd, CPwd) VALUES (?, ?, ?, ?)";
-    con.query(sql, [Name, Email, Pwd, CPwd], function (error, result) {
-        if (error) {
-            console.error(error);
-            return res.status(500).send("Error inserting user into the database.");
-        }
-        res.send("User Added Successfully: " + result.insertId);
-    });
-});
 
 app.listen(8000,()=>{
     console.log('Server running at port 8000')
