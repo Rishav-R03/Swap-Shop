@@ -4,6 +4,20 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+// con.connect(function(error){
+//     if(error) throw error;
+//     console.log("connected !")
+
+//     con.query("SELECT * FROM details ",function(error,result){
+//         if(error) throw error;
+//         console.log(result);//to get all rows
+//         console.log(result[0]);//to get first node
+//         console.log(result[0].product_name);//to get first product name
+//         console.log(result[0].product_id);//to get first product id
+//         console.log(result[0].product_price);//to get first product price
+//     });
+
+// });
 const server = http.createServer((req, res) => {
     try {
         console.log('Request has been made from browser to server!');
