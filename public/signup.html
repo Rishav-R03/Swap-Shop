@@ -1,173 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Signup - SWAP SHOP</title>
-    <link rel = "icon" href = "C:\CODING\SwapShop\Swap-Shop\Images\Favicon.jpg" type = "image/x-icon">
+    <link rel="icon" href="C:\CODING\SwapShop\Swap-Shop\Images\Favicon.jpg" type="image/x-icon">
     <script src="./js/signup.js" type="text/javascript" crossorigin="anonymous"></script>
 </head>
 <!-- <img src="" alt=""> -->
-    <!-- test line to create a new folder on github -->
+<!-- test line to create a new folder on github -->
+
 <body>
     <form action="" method="post">
-    <div class="signup-container">
-        <div class="signup-box">
-            <h1>Signup</h1>
-            <form action="" method="post">
-                <div class="form-input">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Enter Name" name="username" required> 
-                    <i class="fa-regular fa-keyboard"></i>
-                </div>
-                <div class="form-input">
-                    <label for="username">Email:</label>
-                    <input type="email" id="username" placeholder="Enter Email" name="useremail" required>
-                    <i class="fa-regular fa-user"></i>
-                </div>
+        <div class="signup-container">
+            <div class="signup-box">
+                <h1>Signup</h1>
+                <form action="/signup" method="POST">
+                    <div class="form-input">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter Name" name="username" required>
+                        <i class="fa-regular fa-keyboard"></i>
+                    </div>
+                    <div class="form-input">
+                        <label for="username">Email:</label>
+                        <input type="email" id="username" placeholder="Enter Email" name="useremail" required>
+                        <i class="fa-regular fa-user"></i>
+                    </div>
 
-                <div class="form-input">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Enter Password" name="password" required>
-                    <i class="fa-solid fa-lock"></i>
-                </div>
+                    <div class="form-input">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter Password" name="password" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="form-input">
+                        <label for="password">Confirm Password:</label>
+                        <input type="password" id="password" placeholder="Confirm Password" name="cpassword" required>
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
 
-                <button type="submit">Create an account</button>
-            </form>
-            <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+                    <button type="submit" value="Submit">Create an account</button>
+                </form>
+                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+            </div>
         </div>
-    </div></form>
-   <style>
-      <!--css-->
-    * {
-        padding: 0%;
-        margin: 0%;
-    }
+    </form>
+    <style>
+        /* <!--css --> */
+        * {
+            padding:
+                0%;
+            margin:
+                0%;
+        }
 
-    body {
-        display: flex;
-        justify-content: center;
-        background-image: url("Images/lightblue.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+        body {
+            display:
+                flex;
+            justify-content:
+                center;
+            background-image:
+                url("Images/lightblue.jpg");
+            background-size:
+                cover;
+            background-repeat:
+                no-repeat;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
 
-    .form-info {
-        width: 80%;
-    }
+        .form-info {
+            width:
+                80%;
+        }
 
-    h1{
-        font-size: 30px;
-        font-weight: 1000;
-        color: #322082;
-        text-align: center;
-        margin-top: 2rem;
-        font-style: normal;
-    }
+        h1 {
+            font-size:
+                30px;
+            font-weight:
+                1000;
+            color:
+                #322082;
+            text-align:
+                center;
+            margin-top:
+                2rem;
+            font-style:
+                normal;
+        }
 
-    .signup-container {
-        width: 350px;
-        height: 500px;
-        background-color: rgba(183, 228, 240, 0.2);
-        display: flex;
-        justify-content: center;
-        border: 7px solid rgb(145, 185, 240);
-        border-radius: 5px;
-        padding: 16px;
-        margin-top: 22%;
-        margin-left: 8%;
-        border: 5px solid rgb(175, 205, 246);
-    }
-
-    .form-input input:hover {
-        border: 1px solid black;
-    }
-
-    .form-input {
-        margin-top: 2rem;
-        position: relative;
-    }
-
-    .form-input label {
-        display: block;
-    }
-
-    i {
-        position: absolute;
-        right: 20px;
-        top: 65%;
-        transform: translateY(-50%);
-        font-size: 20px;
-    }
-
-    input[type=text],input[type=email],
-    input[type=password] {
-        width: 100%;
-        padding: 10px 20px;
-        margin: 2px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-    }
-     <!--Css for google signin-->
-    .g-signin2 {
-        margin-top: 1rem;
-        margin-left: 5rem;
-    }
-
-    button {
-        background-color: #322082;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        font-size: 17px;
-    }
-
-    button:hover {
-        opacity: 0.8;
-    }
-
-    .login-link {
-        margin-top: 1rem;
-        text-align: center;
-        font-weight: 500;
-        font-size: larger;
-    }
-
-    .login-link a {
-        text-decoration: none;
-        color: rgb(1, 98, 111);
-    }
-        /* Media query for screens with a maximum width of 1024px (for laptops and tablets) */
-        @media (max-width: 1024px) {
         .signup-container {
-            width: 90%; /* Adjust the width for larger screens */
+            width:
+                350px;
+            height:
+                500px;
+            background-color:
+                rgba(183,
+                    228,
+                    240,
+                    0.2);
+            display:
+                flex;
+            justify-content:
+                center;
+            border:
+                7px solid rgb(145,
+                    185,
+                    240);
+            border-radius:
+                5px;
+            padding:
+                16px;
+            margin-top:
+                22%;
+            margin-left:
+                8%;
+            border:
+                5px solid rgb(175,
+                    205,
+                    246);
+        }
+
+        .form-input input:hover {
+            border:
+                1px solid black;
         }
 
         .form-input {
-            margin-top: 1rem; /* Increase the margin for better spacing */
+            margin-top:
+                2rem;
+            position:
+                relative;
         }
-        body {
-            background-size: cover; /* Adjust background size for larger screens */
-        }
-    }
 
-    /* Media query for screens with a maximum width of 760px (for mobile phones) */
-    @media (max-width: 760px) {
-        .signup-container {
-            width: 100%; /* Adjust the width to fill the screen */
-            margin: 0;
-            border: none; /* Remove border */
+        .form-input label {
+            display:
+                block;
         }
-        body {
-            background-size: contain; /* Adjust background size for smaller screens */
+
+        i {
+            position:
+                absolute;
+            right:
+                20px;
+            top:
+                65%;
+            transform:
+                translateY(-50%);
+            font-size:
+                20px;
         }
-    }
-</style>
+
+        input[type=text],
+        input[type=email],
+        input[type=password] {
+            width:
+                100%;
+            padding:
+                10px 20px;
+            margin:
+                2px 0;
+            display:
+                inline-block;
+            border:
+                1px solid #ccc;
+            box-sizing:
+                border-box;
+        }
+
+        /* < !--Css for google signin--> */
+        .g-signin2 {
+            margin-top: 1rem;
+            margin-left: 5rem;
+        }
+
+        button {
+            background-color: #322082;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 17px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .login-link {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 500;
+            font-size: larger;
+        }
+
+        .login-link a {
+            text-decoration: none;
+            color: rgb(1, 98, 111);
+        }
+
+        /* Media query for screens with a maximum width of 1024px (for laptops and tablets) */
+        @media (max-width: 1024px) {
+            .signup-container {
+                width: 90%;
+                /* Adjust the width for larger screens */
+            }
+
+            .form-input {
+                margin-top: 1rem;
+                /* Increase the margin for better spacing */
+            }
+
+            body {
+                background-size: cover;
+                /* Adjust background size for larger screens */
+            }
+        }
+
+        /* Media query for screens with a maximum width of 760px (for mobile phones) */
+        @media (max-width: 760px) {
+            .signup-container {
+                width: 100%;
+                /* Adjust the width to fill the screen */
+                margin: 0;
+                border: none;
+                /* Remove border */
+            }
+
+            body {
+                background-size: contain;
+                /* Adjust background size for smaller screens */
+            }
+        }
+    </style>
 </body>
+
 </html>

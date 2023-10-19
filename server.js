@@ -5,23 +5,37 @@ const fs = require("fs");
 const path = require('path');
 const mysql = require("mysql");
 const cors = require("cors");
+var bodyParser = require("body-parser");
 
-const port = 8000;
-
-const db = mysql.createConnection({
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static(__dirname + '/public'));
+const con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "root123",
-    database: "signup"
+    database: "products"
 });
+// con.connect(function(error){
+//     if(error) throw error;
+//     console.log("connected !")
 
+//     con.query("SELECT * FROM details ",function(error,result){
+//         if(error) throw error;
+//         console.log(result);//to get all rows
+//         console.log(result[0]);//to get first node
+//         console.log(result[0].product_name);//to get first product name
+//         console.log(result[0].product_id);//to get first product id
+//         console.log(result[0].product_price);//to get first product price
+//     });
+
+// });
 // Middleware setup
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 app.use(express.static(__dirname));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res)=>{
     console.log(__dirname+"/public/index.html");
@@ -59,9 +73,9 @@ app.get("/sellerpage", (req, res)=>{
     res.sendFile(__dirname + "/public/sellerpage.html");
 })
 
-app.get("/signup", (req, res)=>{
-    console.log(__dirname+"/public/signup.html");
-    res.sendFile(__dirname + "/public/signup.html");
+app.get("/signup",function(req,res){
+    console.log(__dirname+'/public/signup.html')
+    res.sendFile(__dirname+'/public/signup.html');
 })
 
 app.get("/blog", (req, res)=>{
@@ -79,31 +93,23 @@ function handleDatabaseError(res, err) {
     console.error(err);
     res.status(500).json({ message: "An error occurred on the server." });
 }
-
-app.get("/users", (req, res) => {
-    const q = "SELECT * FROM users";
-    db.query(q, (err, data) => {
-        if (err) {
-            handleDatabaseError(res, err);
-        } else {
-            res.json({ data });
+app.post('/signup', function (req, res) {
+    console.log(req.body);
+    var Name = req.body.Name;
+    var Email = req.body.Email;
+    var Pwd = req.body.Pwd;
+    var CPwd = req.body.CPwd;
+    
+    var sql = "INSERT INTO login (Name, Email, Pwd, CPwd) VALUES (?, ?, ?, ?)";
+    con.query(sql, [Name, Email, Pwd, CPwd], function (error, result) {
+        if (error) {
+            console.error(error);
+            return res.status(500).send("Error inserting user into the database.");
         }
+        res.send("User Added Successfully: " + result.insertId);
     });
 });
 
-app.post("/users", (req, res) => {
-    const q = "INSERT INTO users (Name, Age, Year) VALUES (?, ?, ?)";
-    const values = [req.body.Name, req.body.Age, req.body.Year];
-
-    db.query(q, values, (err, result) => {
-        if (err) {
-            handleDatabaseError(res, err);
-        } else {
-            res.json({ message: "User has been created!", data: result });
-        }
-    });
-});
-
-app.listen(port, () => {
-    console.log(`app listening on port ${port}`)
+app.listen(8000,()=>{
+    console.log('Server running at port 8000')
 });
