@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sell on SwapShop</title>
     <script src="../server.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
@@ -12,7 +12,7 @@
     <link rel="icon" href="./Images/Favicon.jpg" type="image/x-icon">
      <!----------x---------------Google font --------x------->
      <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
      <link
          href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap"
          rel="stylesheet">
@@ -20,7 +20,7 @@
      <link
          href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display:swap">
      <!----------x---------------Google font --------x----------------->
-     <script src="https://kit.fontawesome.com/dad03e859c.js" integrity="sha256-..." crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/dad03e859c.js"  crossorigin="anonymous"></script>
 </head>
 <!-- <img src="" alt=""> -->
     <!-- test line to create a new folder on github -->
@@ -53,20 +53,22 @@
             
         </div>
     </section>
-    <div id = "hero" style="text-align: center;">
-        <h2>Seller's Details</h2>
-        <p>Name : <input type="text"></p>
-        <h4>Item to sell:-</h4>
-        
+    
+    <div class="sellprod" > 
         <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
-            <p>Product Image: <input type="file" name="image" accept="image/*" id="file-input"></p>
             
+        
+            <h4>Seller's Details</h4>
+        
+            <p>Name: <input type="text"></p>
+            <h4>Item to sell:</h4>
+            <p>Product Image: <input type="file" name="image" accept="image/*" id="file-input"></p>
             <button type="submit">Upload Image</button>
-            <br>
-            <input type = "text" name ="price" placeholder = "expected price">
-            <textarea name="description" id ="desp" placeholder="give product description"rows=5 column = 5>
+            <p><input type="text" name="price" placeholder="Expected Price"></p>
+            <p><textarea name="description" id="desp" placeholder="Give Product Description" rows="5" columns="5"></textarea></p>
+        
         </form>
-      </div>
+    </div>
 
        
 
@@ -150,6 +152,7 @@
         </div>
 
     </footer>
+    
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     
