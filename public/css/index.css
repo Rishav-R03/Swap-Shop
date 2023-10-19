@@ -692,8 +692,9 @@ button.white{
   background-color: #088178;
   color: #fff;
   white-space: nowrap;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;  
+  border-top-right-radius: 5;
+  border-bottom-right-radius: 5;  
+  margin:10px;
 }
 
 #newsletter .form{
