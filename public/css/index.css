@@ -146,7 +146,7 @@ display: none;
 
 } */
 #page-header .blog-header{
-  background-image: url(Images/books1.jpg);
+  background-image: url(../Images/books1.jpg);
   
 }
 #navbar li a:hover,
@@ -235,7 +235,7 @@ padding: 25px;
   display: flex;}
 
 #hero{
-  background-image: url("Images/bghome2.avif");
+  background-image: url("../Images/bghome2.avif");
   height: 70vh;
   width: 100%;
   background-size: cover;
@@ -419,7 +419,7 @@ flex-wrap: wrap
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(Images/online-shopping-store-smartphone-with-shopping-cart-bags-purple-background-3d-rendering_265427-1730.avif);
+  background-image: url(../Images/online-shopping-store-smartphone-with-shopping-cart-bags-purple-background-3d-rendering_265427-1730.avif);
   width: 100%;
   height: 40vh;
   background-position: center;
@@ -589,7 +589,7 @@ button.white{
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  background-image: url(Images/grocery.jpg);
+  background-image: url(../Images/grocery.jpg);
   min-width: 30%;
   height: 30vh;
   background-position: center;
@@ -627,11 +627,11 @@ button.white{
 }
 
 #banner3 .banner-img2{
-  background-image: url(Images/stationery1.jpg)
+  background-image: url(../Images/stationery1.jpg)
 }
 
 #banner3 .banner-img3{
-   background-image: url(Images/books1.jpg)
+   background-image: url(../Images/books1.jpg)
 }
 #pagination{
   text-align: center;
